@@ -1,0 +1,6 @@
+# Setup
+name:         Holocache
+tagline:      Room-scale Geocaching on the Hololens
+baseurl:      ""
+
+markdown: redcarpet
