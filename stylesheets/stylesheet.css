@@ -521,6 +521,12 @@ aside#sidebar li {
 aside#sidebar a.active {
     font-weight: bold;
 }
+aside#sidebar h3 {
+    text-align: center;
+}
+aside#sidebar hr {
+    padding: 10px 10px 0px 10px;
+}
 
 footer {
     font-size: 12px;

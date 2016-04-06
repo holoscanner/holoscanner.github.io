@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title> {{ page.title }} </title>
+    <title> {{ site.name }} - {{ page.title }} </title>
   </head>
 
   <body>
@@ -42,6 +42,19 @@
                         {% else %}
                         <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
                         {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <hr>
+            <h3> Blog </h3>
+
+            {% for node in site.posts limit:10 %}
+                {% if node.title != null %}
+                    {% if page.url == node.url %}
+                    <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+                    {% else %}
+                    <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
                     {% endif %}
                 {% endif %}
             {% endfor %}

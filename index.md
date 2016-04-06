@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Holocache
+title: Home
 ---
 
 Holocache is a simple game for the [Microsoft Hololens](https://www.microsoft.com/microsoft-hololens/en-us). It takes the idea of geocaching and redefines it with an awareness of room-scale 3D scene structure.
