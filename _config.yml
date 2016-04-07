@@ -1,6 +1,6 @@
 # Setup
-name:         Holocache
-tagline:      Room-scale Geocaching on the Hololens
+name:         Holoscanner
+tagline:      Gamifying 3D Scanning
 baseurl:      ""
 
-markdown: redcarpet
+markdown: kramdown
