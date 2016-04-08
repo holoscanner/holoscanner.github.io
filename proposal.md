@@ -27,7 +27,10 @@ Behind the scenes, the placement of bunnies is selected based on regions of the 
 
 The primary objective in this application is producing a high-quality 3D mesh which accurately models the scene around the players. Doing this involves identifying regions that need to be scanned. These regions can be regions that haven't yet been scanned by any of the players, or even regions with inconsistent models across multiple Hololens devices. Once these regions are identified, the gameplay will cue users to move towards that region to provide additional observations.
 
+A missing region:
 ![A missing region](images/missing.png)
+
+An region with inconsistent models across Hololens devices:
 ![An inconsistent region](images/inconsistent.png)
 ![A magnified version of the same image](images/inconsistent_zoom.png)
 
