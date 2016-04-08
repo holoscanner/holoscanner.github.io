@@ -16,6 +16,7 @@ Currently, we are considering a number of gameplay options. Our goal is to produ
 ### Option 1: Hide and Seek
 
 The game state begins with the players standing in a room. As the application launches, a number of bunnies appear in the room, but quickly scurry away. 
+![The start state](images/bunnies.png)
 
 The goal becomes to find the bunnies before the other players. Players will search the explorable space for the bunnies. Spatial sound cues will be given to lead players in the general direction of bunnies. Once found, bunnies will reappear in other parts of the scene until some criteria is met. 
 
