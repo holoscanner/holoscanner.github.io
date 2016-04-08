@@ -61,8 +61,9 @@ If we decide to implement any variant of the hide-and-seek game above, we will b
 ## Questions and Concerns
 Will there be portions of the mesh corresponding to the other players in the room even if those players are moving?
 
-Can we get any more low-level data from the Hololens? SDF, depth map?
+Can we get any more low-level data from the Hololens? SDF, depth map? Can we ensure that the data we're receiving is not biased by previous observations?
 
 How well can we approximate the mesh with primitives and still have a compelling experience?
+
 
 
