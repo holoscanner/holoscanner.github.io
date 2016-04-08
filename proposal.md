@@ -36,16 +36,17 @@ The primary objective in this application is producing a high-quality 3D mesh wh
 
 ### Multiplayer
 
-**Mesh Alignment**
+**Mesh Alignment**:
 Alignment of the global model across multiple devices may prove to be a challenge if there are few overlapping regions or the individual models are noisy and inconsistent. It may be necessary to provide some user input to generate an initial rough alignment. 
 
-**Model Consistency**
+**Model Consistency**:
 It's important that throughout the game, players all experience the same 3D scene. This involves not only aligning multiple models, but merging the observations into a globally optimal model that is as consistent as possible with the input data from each player's Hololens. This is necessary because the gameplay involves objects hiding behind scanned occluders in the scene, and therefore all players must have a consistent occlusions. 
 
 ### Mesh Region Scoring
 
 In order to decide whether a region needs to be scanned, it's necessary to determine the quality of the current scan. If individual models are inconsistent, the alignment error can be used, and if the region has no data whatsoever, it should certainly be scanned. There are however several edge cases: 
-**Scene Complexity and Unscannable Regions**
+
+**Scene Complexity and Unscannable Regions**:
 There also exist cases in which a region cannot be scanned, or is too complex to be scanned accurately. A mirror, for example, may be seen hundreds of times from different perspectives, but may never produce a consistent model of its true geometry. Therefore, it may be necessary to identify the number of observations that have been given for a particular region and if a consistent model has not been generated, either forego reconstruction of that region or produce an estimate given its surroundings.
 
 ### Termination Criteria
@@ -56,7 +57,9 @@ If we decide to implement any variant of the hide-and-seek game above, we will b
 
 ## Questions and Concerns
 Will there be portions of the mesh corresponding to the other players in the room even if those players are moving?
+
 Can we get any more low-level data from the Hololens? SDF, depth map?
+
 How well can we approximate the mesh with primitives and still have a compelling experience?
 
 
