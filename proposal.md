@@ -44,6 +44,7 @@ Alignment of the global model across multiple devices may prove to be a challeng
 
 **Model Consistency**:
 It's important that throughout the game, players all experience the same 3D scene. This involves not only aligning multiple models, but merging the observations into a globally optimal model that is consistent with the input data from each player's Hololens. This will allow players to have consistent occlusions, a very important factor in a game where objects are hidden behind parts of the real-world geometry.
+
 ### Mesh Region Scoring
 
 In order to decide whether a region needs to be scanned, it's necessary to determine the quality of that region's current scan. A region should be scanned if individual models are inconsistent and the alignment error is high, or if the region has no data whatsoever. There exist several edge cases, however.
