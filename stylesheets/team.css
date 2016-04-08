@@ -1,0 +1,18 @@
+#team {
+    border: medium none;
+}
+
+#team td {
+    border: medium none;
+    vertical-align: top
+}
+
+h2.membername {
+    text-align:left;
+}
+img.memberimage {
+    width:100px;
+}
+.memberdesc {
+    text-align:left;
+}
