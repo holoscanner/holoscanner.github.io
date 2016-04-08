@@ -11,7 +11,7 @@ _We propose creating a game which, as a result of its mechanics, causes the play
 
 ## The Gameplay
 
-Currently, we are considering a number of gameplay options. Our goal is to produce a convincing and entertaining experience that successfully obfuscates the ulterior motive of scanning the room. The following is our current draft of the gameplay, although we are open to other ideas. 
+Currently, we are considering a number of gameplay options. Our goal is to produce a convincing and entertaining experience that successfully obfuscates the ulterior motive of scanning the room. The following is a simple example of possible gameplay, although many alternatives based around the idea of hidden spatial objectives are possible.
 
 ### Draft: Hide and Seek
 
