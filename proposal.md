@@ -47,7 +47,7 @@ It's important that throughout the game, players all experience the same 3D scen
 
 ### Mesh Region Scoring
 
-In order to decide whether a region needs to be scanned, it's necessary to determine the quality of that region's current scan. A region should be scanned if individual models are inconsistent and the alignment error is high, or if the region has no data whatsoever. There exist several edge cases, however.
+In order to decide whether a region needs to be scanned, it's necessary to determine the quality of that region's current scan. A region should be scanned if individual models are inconsistent and the alignment error is high, or if the region has no data whatsoever. There exists at least one edge case, however.
 
 **Scene Complexity and Unscannable Regions**:
 There exist cases in which a region cannot be scanned, or is too complex to be scanned accurately. A mirror, for example, may be seen hundreds of times from different perspectives, but may never produce a consistent model of its true geometry. Therefore, it may be necessary to identify the number of observations that have been given for a particular region and if a consistent model has not been generated, either forego reconstruction of that region or produce an estimate given its surroundings.
