@@ -4,3 +4,4 @@ tagline:      Gamifying 3D Scanning
 baseurl:      ""
 
 markdown: kramdown
+exclude: ["README.md", "Gemfile", "runserver.sh", "makepost.sh"]
