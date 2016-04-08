@@ -3,10 +3,10 @@ layout: default
 title: Team
 ---
 
-##Edward Zhang
+## Edward Zhang
 
-##Keunhong Park
+## Keunhong Park
 
-##Aleksander Holynski
+## Aleksander Holynski
 
-##Hamid Izadinia
+## Hamid Izadinia
