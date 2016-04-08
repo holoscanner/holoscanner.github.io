@@ -7,7 +7,7 @@ title: Project Proposal
 
 _The Hololens has the capabilities to produce good quality 3D scans of indoor scenes, but spending time scanning a room can be a tedious process. In order to view objects, perform tasks, or even play games, Hololens users spend a lot of time looking around and exploring their environments, so why not design applications that encourage this exploration to occur in regions which need to be scanned?_
 
-_We propose creating a game which, as a result of its mechanics, causes the players to inadvertently produce an accurate and complete scan of their surroundings. _
+_We propose creating a game which, as a result of its mechanics, causes the players to inadvertently produce an accurate and complete scan of their surroundings._
 
 ## The Gameplay
 
