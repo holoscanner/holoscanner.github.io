@@ -30,7 +30,7 @@ The primary objective in this application is producing a high-quality 3D mesh wh
 A missing region:
 ![A missing region](images/missing.png)
 
-An region with inconsistent models across Hololens devices:
+A region with inconsistent models across Hololens devices:
 ![An inconsistent region](images/inconsistent.png)
 ![A magnified version of the same image](images/inconsistent_zoom.png)
 
