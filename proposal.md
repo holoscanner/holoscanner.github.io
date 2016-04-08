@@ -13,7 +13,7 @@ _We propose creating a game which, as a result of its mechanics, causes the play
 
 Currently, we are considering a number of gameplay options. Our goal is to produce a convincing and entertaining experience that successfully obfuscates the ulterior motive of scanning the room. The following is our current draft of the gameplay, although we are open to other ideas. 
 
-###Option 1: Hide and Seek
+### Option 1: Hide and Seek
 
 The game state begins with the players standing in a room. As the application launches, a number of bunnies appear in the room, but quickly scurry away. 
 
@@ -26,18 +26,18 @@ Behind the scenes, the placement of bunnies is selected based on regions of the 
 The primary objective in this application is producing a high-quality 3D mesh which accurately models the scene around the players. Doing this involves identifying regions that need to be scanned. These regions can be regions that haven't yet been scanned by any of the players, or even regions with inconsistent models across multiple Hololens devices. Once these regions are identified, the gameplay will cue users to move towards that region to provide additional observations. 
 ## Technical Challenges
 
-###Multiplayer
+### Multiplayer
 
-####Mesh Alignment
+#### Mesh Alignment
 
-####Model Consistency
+#### Model Consistency
 
-###Mesh Region Scoring
+### Mesh Region Scoring
 
-###Termination Criteria
+### Termination Criteria
 
-###Scene Complexity and Unscannable Regions
+### Scene Complexity and Unscannable Regions
 
-## DeviceQuestions and Concerns
+## Device Questions and Concerns
 
 
