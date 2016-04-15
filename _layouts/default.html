@@ -65,7 +65,7 @@
             <hr>
             <h3> Blog </h3>
 
-            {% for node in site.posts limit:10 %}
+            {% for node in site.posts reversed limit:10 %}
                 {% if node.title != null %}
                     {% if page.url == node.url %}
                     <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
