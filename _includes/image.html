@@ -1,0 +1,10 @@
+<div class="image-wrapper">
+    {% if include.image %}
+        <img src="{{BASE_PATH}}/images/{{include.image}}"/>
+    {% else %}
+        <img src="{{ include.url }}"/>
+    {% endif %}
+    {% if include.caption %}
+        <div class='image-caption'>{{ include.caption }}</div>
+    {% endif %}
+</div>

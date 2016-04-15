@@ -1,0 +1,12 @@
+<div class="image-wrapper">
+    {% if include.aspectratio %}
+    <div class='embed-responsive embed-responsive-{{ include.aspectratio }}'>
+    {% else %}
+    <div class='embed-responsive embed-responsive-16by9'>
+    {% endif %}
+    <iframe src="https://www.youtube.com/embed/{{ include.video }}" class="embed-responsive-item"> </iframe>
+</div>
+    {% if include.caption %}
+        <div class='image-caption'>{{ include.caption }}</div>
+    {% endif %}
+</div>
