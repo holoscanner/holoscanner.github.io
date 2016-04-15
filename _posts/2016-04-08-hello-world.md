@@ -25,7 +25,7 @@ opens up an interesting questions: if everyone has a Hololens, can everyone
 get expert-quality 3D scans? Holoscanner is our first stab at enabling this
 vision.
 
-{% include youtube_embed.html video="j0EDU-MzHGY" %}
+{% include youtube_embed.html video="s_JvpplcfzU" %}
 
 ### The Plan ###
 Our app will have two main parts: the frontend running on the Hololens, with an
