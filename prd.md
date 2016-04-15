@@ -14,6 +14,7 @@ _Holoscanner is a system that creates a 3D scan of an indoor scene by processing
     - A Hololens game frontend
     - A cloud mesh processing backend
 
+
 - The visualization of the 3D scan of the room and showing how it improves over time
 
 - An application scenario that uses the produced accurate 3D scan of the room
