@@ -75,3 +75,8 @@ _Holoscanner is a system that creates a 3D scan of an indoor scene by processing
  
 We need 3D assets for the gameplay. Depending on gameplay complexity, we estimate a $40 asset budget for a simple hide-and-seek game (one or two characters or props to hide) or
 up to $200 for a more complex game (e.g. territory acquisition game, capture-the-flag game) with multiple characters and many game props and scene elements
+
+We also may run our backend on a commercial cloud service such as [AWS](https://aws.amazon.com). As an upper bound on the cost of these services,
+we estimate that for 10 hours/week of active testing over the second half of the quarter (the initial testing can be done on local containers).
+Using `g2.8xlarge` AWS GPU instances (which are probably overkill), which are $2.60/hour for on-demand instances, that works out to $130. Moving down to `g2.xlarge` instances reduces this estimate to about $30.
+Storage and server machines have minimal (less than $5) or no additional cost for our applications, at least for testing purposes.
