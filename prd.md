@@ -48,7 +48,10 @@ players locate them.
 
 ## Performance Metrics
  
-- Qualitative improvement of the reconstructed 3D model over time using a video that highlights mesh accuracy from first scans of the room until the end of game.
+- Mesh completeness can be evaluated quantitatively in several ways. One simple metric is to compute the total length of mesh edges incident on only one mesh face (since these correspond to "edges" of the mesh) relative to the total surface area of the mesh. Depending on our backend system, we can also evaluate the scene volumetrically, tracking the number of unobserved voxels vs. free space/occupied voxels. However, this is unlikely to be computationally feasible in an online setting.
+- Quantitative accuracy of the reconstructed 3D model. We can use state-of-the-art 3D reconstruction systems to scan the same environment to provide a "ground truth". Then we can quantitatively compare our reconstruction with theirs by computing the distance to the nearest surface on the ground truth mesh for each vertex (or uniformly sampled set of points) in our reconstructed mesh.
+- Qualitative improvement of the reconstructed 3D model over time, especially in difficult or cluttered regions of the scene. This can be demonstrated using a video that highlights mesh accuracy from first scans of the room until the end of game, of e.g. a desk (where e.g. initially monitors are not captured and there are holes in the desk)
+- Suitability of hidden-objective locations can be evaluated by tracking our quantitative metrics above over time, and determining how well they correlate with when players find objectives during the game. We can also compare with a "control player" who does not actively try to locate objectives, but simply wanders around the room (since this will likely also increase the metrics by a small amount over time)
 
 ## Milestones
 
