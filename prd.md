@@ -55,34 +55,60 @@ players locate them.
 
 ## Milestones
 
--- April 20: framework (protocol, central server, basic game loop)
+### Week 1 (April 20)
+ * framework (protocol, central server, basic game loop)
 
--- April 27: multiple mesh alignment, minimal gameplay and interface
+### Week 2 (April 27)
+ * Multiple mesh alignment
+ * Minimal gameplay and interface
 
--- May 4: initial results for mesh refinement and missing region identification
+### Week 3(May 4)
+ * Initial results for mesh refinement and missing region identification
 
--- May 11: improved refinement and identification of missing and misaligned regions
+### Week 4 (May 11)
+ * Improved refinement
+ * Improved identification of missing and misaligned regions
 
--- May 18: complete gameplay system, finish region selection method and integrate it into game
+### Week 5 (May 18)
+ * Complete gameplay system
+ * Finished region selection method integrated into game
+ * Working single-player version of game.
 
--- May 25: iterate and playtest for end-to-end gameplay and in-game mesh quality
+### Week 6 (May 25)
+ * Iterate and playtest for end-to-end gameplay and in-game mesh quality.
+ * Integrated game using mesh alignment from multiple clients.
 
--- June 1: evaluate final reconstructed 3D model of the room, basic application for high-quality model
+### Week 7 (June 1)
+ * Evaluate final reconstructed 3D model of the room (qualitative, quantiative)
+ * Prototype basic application using high-quality model
 
--- June 8: prepare demo for game and refine application of high-quality model
+### Week 8 (June 8)
+ * Working demo for game
+ * Polish application using high-quality model.
 
 
 ## Responsibilities
 
-**Hamid Izadinia:** mesh alignment, identify missing mesh regions
+**Hamid Izadinia:**
 
-**Edward Zhang:** gameplay experience, mesh refinement
+ * Mesh alignment
+ * Identify missing mesh regions
 
-**Aleksander Holynski:** core game architecture in Unity, mesh inconsistency measurement and animated character placement
+**Edward Zhang:**
 
-**Keunhong Park:** cloud server and protocols, identify unscannable regions
+ * Gameplay experience
+ * Mesh refinement
 
+**Aleksander Holynski:**
 
+ * Core game architecture in Unity
+ * Mesh inconsistency measurement
+ * Animated character placement
+
+**Keunhong Park:**
+
+ * Cloud server and protocols
+ * Identify unscannable regions
  
  
 ## Materials and Budget
