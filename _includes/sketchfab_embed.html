@@ -1,0 +1,12 @@
+<div class="image-wrapper">
+    {% if include.aspectratio %}
+    <div class='embed-responsive embed-responsive-{{ include.aspectratio }}'>
+    {% else %}
+    <div class='embed-responsive embed-responsive-16by9'>
+    {% endif %}
+    <iframe class="embed-responsive-item" src="https://sketchfab.com/models/{{ include.meshid }}/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+</div>
+    {% if include.caption %}
+        <div class='image-caption'>{{ include.caption }}</div>
+    {% endif %}
+</div>
