@@ -17,7 +17,74 @@ to define our communications protocol. This handles a lot of headaches that
 would be involved dealing with byte streams, endianness, and consistency
 between client and server code.
 
-FIXME
+Our protocol defines a generic message passing format as well as a specific mesh format.
+The mesh format is similar to others--it defines vertices then faces which use these
+vertices.
+
+```
+syntax = "proto3";
+
+message Vec3D {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message Vec4D {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float w = 4;
+}
+
+message Face {
+    uint32 v1 = 1;
+    uint32 v2 = 2;
+    uint32 v3 = 3;
+}
+
+message Mesh {
+    uint32 mesh_id = 2;
+    uint64 timestamp = 3;
+
+    // We need the camera position in case we want to do space carving.
+    Vec3D cam_position = 100;
+    Vec4D cam_rotation = 101;
+
+    repeated Vec3D vertices = 200;
+    repeated Face faces = 201;
+}
+
+message LocationRequest {
+    ;
+}
+message LocationResponse {
+    Vec3D location = 1;
+    Vec3D orientation = 2;
+}
+
+message Message {
+    enum Type {
+        MESH = 0;
+        LOCATION_REQUEST = 1;
+        LOCATION_RESPONSE = 2;
+    }
+
+    Type type = 1;
+    uint32 device_id = 2;
+
+    // One of the following will be filled in.
+    Mesh mesh = 100;
+    LocationRequest location_request = 300;
+    LocationResponse location_response = 400;
+}
+```
+
+
+## Server-Client Architecture
+
+Our project will have a client and server component. The client (Hololens) will pass relevant information to the server for heavy processing (mesh alignment, refinement etc.).
+
 
 ## Mesh Quality Experiments
 The Hololens geometry data is provided to the user as a collection of several
