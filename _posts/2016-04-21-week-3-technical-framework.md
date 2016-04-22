@@ -109,6 +109,37 @@ raw marching cubes mesh on the SDF they use for reconstruction). We also heard
 rumors of some side channel or internal tool that could be used to get the raw
 data, but it is unclear if we will be able to use this.
 
-## Mesh Alignment Approaches
+## Mesh Processing
 
-## Mesh Refinement Approaches
+We anticipate that most of our mesh processing approaches will be based on volumetric integration methods,
+based on the methods introduced by [VRIP](https://graphics.stanford.edu/papers/volrange/) (Curless & Levoy 1996)
+and refined in [KinectFusion](http://research.microsoft.com/en-us/projects/surfacerecon/) (Newcombe et al. 2011).
+
+### Mesh Alignment Approaches
+
+For mesh alignment, we will start with the rough alignment of coordinate systems between Hololens devices provided by the HoloToolkit Sharing code.
+If this proves to be insufficient, we can refine alignments relative either to a global volumetric model (similar to KinectFusion) or relative
+to one of the Hololens meshes. Fine scale alignment can be done by using ICP.
+
+Larger scale misalignments (e.g. subtle warping when walls do not quite line up or bend) coulld be aligned by taking advantage of the
+Manhattan World assumption of the large planes in the world. We could use an alignment method that forces large planes to be parallel
+or coplanar.
+
+### Mesh Refinement Approaches
+
+In terms of mesh refinement, we will begin with the problem of effectively integrating multiple meshes. This will provide a single, 
+clean mesh rather than the several overlapping noisy meshes in the raw input. We will also implement a
+signed distance function-based approach as in VRIP and KinectFusion, which will average out the noise. We also imagine that aligning
+the volume with the dominant directions of the walls will let us smooth the volume and provide even cleaner reconstructions for these
+surfaces.
+
+Another challenge is dealing with dynamic objects. In our global volume, it is possible that dynamic objects will be reconstructed as
+scene geometry. However, for any new mesh captured from a particular viewpoint, we can render a depth map of the global volume and compare
+it to the new mesh. If there is a surface in the global map that is closer than a surface in the new observation, then we know that the
+data in the global map is in error and those voxels should be cleared. Note that this does not work for detecting dynamic objects in new
+scans that are not in the global volume, since these are just as likely to be new unscanned data that should be in the scene. In this case,
+we just integrate the (possibly) dynamic object into the volume, and when another device views the space again, the above algorithm should then
+detect and remove the dynamic object.
+
+This framework does not handle other refinement issues we'd like to address, such as using the color images to inform occlusion boundaries.
+However we probably won't have time to address this type of issue.
