@@ -59,10 +59,11 @@ players locate them.
  * framework (protocol, central server, basic game loop)
 
 ### Week 2 (April 27)
- * Multiple mesh alignment
- * Minimal gameplay and interface
+ * Transmissions of mesh and messages between server and client. 
 
 ### Week 3(May 4)
+ * Multiple mesh alignment
+ * Minimal gameplay and interface
  * Initial results for mesh refinement and missing region identification
 
 ### Week 4 (May 11)
