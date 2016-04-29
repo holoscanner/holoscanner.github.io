@@ -6,6 +6,14 @@ title: "Week 4: Client-Server Communication"
 This week, we got our basic client-server system up and running (mostly). The Hololens can successfully send meshes to our python server, using the Google protobuf libraries we discussed [last week]({% post_url 2016-04-21-week-3-technical-framework %}). The server was Keunhong's work, while Edward and Alex worked on the Unity/Hololens side of the communications.
 Hamid also did some further investigation on the characteristics of the Hololens meshes to better inform server side processing.
 
+## Protocol Buffer Plumbing
+
+Keunhong and Edward, as former Google interns, were generally familiar with the usage of Protocol Buffers. The Protocol Buffer library allows developers to define a
+data structure, and then generates code that allows this data to be exchanged between different programming languages. This means that any changes to the data only have
+to be made in one place, rather than risking inconsistency between a client and server.
+
+To use protocol buffers, we first define a message type in a `.proto` file. Examples of `.proto` syntax are shown below. Then, after installing the [appropriate Protobuf library for your language](https://github.com/google/protobuf), simply run the `protoc` command with the appropriate language argument. For example, we use `protoc holoscanner.proto --python_out=.`. This generates a language-specific (e.g. python) file specific to your message datatype that can then be included in your code.
+
 ## Server Architecture
 
 ### Protocol
@@ -73,7 +81,7 @@ We performed a sanity check of the system using a custom wavefront mesh parser u
 
 ## Client Communications Architecture
 
-Work in progress...
+We started with the Spatial Mapping code provided in HoloToolkit. In particular, the `RemoteMeshManager` converts all the Unity meshes into byte arrays when the user says "Send Meshes", while `RemoteMeshSource` sends byte arrays over a TCP socket. We took out the extraneous functionality from the `RemoteMeshManager` (that dealt with viewing meshes sent from the Hololens on a desktop), and wrote our own plumbing to convert Unity meshes into our protobuf format. We also removed a single line from `RemoteMeshSource`, since in the HoloToolkit implementation it sends an extra 4-byte length along with every packet (whereas we send the length before the first packet of the protobuf). We were able to successfully transfer a mesh from the Hololens to a server running on a separate machine, although the auxiliary fields (e.g. device ID, device pose) haven't yet been filled in.
 
 ## Mesh Analysis
 
