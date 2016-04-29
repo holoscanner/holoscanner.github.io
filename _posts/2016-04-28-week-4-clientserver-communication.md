@@ -8,6 +8,8 @@ Hamid also did some further investigation on the characteristics of the Hololens
 
 ## Server Architecture
 
+### Protocol
+
 The server accepts connections from a client asynchronously. Each connection accepts incoming Protocol Buffer messages which the server can handle accordingly.
 These Protocol Buffers may be broken up into several packets, so before sending/receiving the bytes containing the protobuf we send an 8-byte unsigned long integer with the total size of the protobuf message. Messages of type `MESH` are parsed into a datastructure for further processing.
 
@@ -62,6 +64,11 @@ message LocationResponse {
 }
 ```
 
+### Implementation Details
+
+We use the standard library asyncio module to implement asynchronous communication. This allows us to handle the data without having to manage threads manually.
+
+We performed a sanity check of the system using a custom wavefront mesh parser using a mock client. The server correctly receives and handles the message.
 
 
 ## Client Communications Architecture
