@@ -87,6 +87,11 @@ We started with the Spatial Mapping code provided in HoloToolkit. In particular,
 
 Work in progress...
 
+{% include sketchfab_embed.html meshid="307ae0ae0f6644c195a732c0e09febb0" %}
+
+{% include sketchfab_embed.html meshid="1358437b4a1f44b09a409765b4fcb6e4" %}
+
+
 ## Plans
 While some concrete stuff got done this week, we still don't have our basic gameplay interface. 
 This will be the main task for Alex and Edward next week.
