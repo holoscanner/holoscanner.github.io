@@ -9,8 +9,7 @@ Hamid also did some further investigation on the characteristics of the Hololens
 ## Server Architecture
 
 The server accepts connections from a client asynchronously. Each connection accepts incoming Protocol Buffer messages which the server can handle accordingly.
-
-Messages of type `MESH` are parsed into a datastructure for further processing.
+These Protocol Buffers may be broken up into several packets, so before sending/receiving the bytes containing the protobuf we send an 8-byte unsigned long integer with the total size of the protobuf message. Messages of type `MESH` are parsed into a datastructure for further processing.
 
 Messages are encoded in a generic Message protobuf.
 
@@ -51,7 +50,7 @@ message Mesh {
 
 Each mesh is associated with a timestamp since we wish to know whether the mesh has been updated . The camera positions are useful for operations such as space carving.
 
-The server also accepts updates to the client's position:
+When the client needs a new 3D location as a game objective (i.e. a place to hide an object), it makes a `LocationRequest` message, and gets back a `LocationResponse` message.
 
 ```
 message LocationRequest {
