@@ -6,9 +6,11 @@ title: "Week 4: Client-Server Communication"
 This week, we got our basic client-server system up and running (mostly). The Hololens can successfully send meshes to our python server, using the Google protobuf libraries we discussed [last week]({% post_url 2016-04-21-week-3-technical-framework %}). The server was Keunhong's work, while Edward and Alex worked on the Unity/Hololens side of the communications.
 Hamid also did some further investigation on the characteristics of the Hololens meshes to better inform server side processing.
 
-## Server Architexture
+## Server Architecture
 
-Work in progress...
+The server accepts connections from a client asynchronously. Each connection accepts incoming Protocol Buffer messages which the server can handle accordingly.
+
+Messages of type `MESH` are parsed into a datastructure for furhter processing.
 
 ## Client Communications Architecture
 
