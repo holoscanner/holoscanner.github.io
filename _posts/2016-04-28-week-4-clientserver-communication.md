@@ -85,11 +85,20 @@ We started with the Spatial Mapping code provided in HoloToolkit. In particular,
 
 ## Mesh Analysis
 
-Work in progress...
+Hamid did some analysis on the mesh input of a single Hololens from a scene that contains three connected rooms in VR Lab. There are some interesting observations from the meshes. It seems that the Hololens divide the volumetric space into tiled cubes on a 3D grid with small overlap between adjacent blocks. The Hololens tries to find the best surface reconstruction for each cube in the 3D space by sequentially processing the depth information from the sensors. The following 3D model shows all sub-meshes captured by a single Hololens and vertices are colored in Meshlab based on their distance to the border of sub-meshes. The 3D grid of volumetric space is visible in the large planar surfaces.
+
 
 {% include sketchfab_embed.html meshid="307ae0ae0f6644c195a732c0e09febb0" %}
 
+
+The boundary of the rooms are visible even with noisy and coarse meshes on the walls. The wall surfaces on both sides of the same wall from different rooms are not confused or mixed together. This shows that planar surfaces like wall and floor is easy to reconstruct after some post processing and refinement on meshes. There are some holes on the wall behind or near fluorescent lamps, which can be corrected by capturing from different views. The windows are unscannable parts and there are large holes in the location of four windows.
+
+After applying midpoint subdivision surface and Poisson surface reconstruction we get a smooth 3D model of the scene. The reconstruction of the walls are decent, though there are some holes on them. Some of the objects (such as monitor, chair, desk, etc) are partially reconstructed. This can be improved by multiple capturing of the same object from different viewpoint.
+
+
 {% include sketchfab_embed.html meshid="1358437b4a1f44b09a409765b4fcb6e4" %}
+
+
 
 
 ## Plans
