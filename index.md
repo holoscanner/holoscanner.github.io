@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% include youtube_embed.html video="s_JvpplcfzU" %}
+{% include youtube_embed.html video="IYQMVZw5AAQ" %}
 
 Holoscanner is a simple game for the [Microsoft Hololens](https://www.microsoft.com/microsoft-hololens/en-us). It takes the idea of hide-and-seek, but leverages knowledge of room geometry to hide objects behind or around occlusions.
 
