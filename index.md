@@ -11,6 +11,13 @@ Holoscanner has an ulterior motive, however. It is a game built around the idea 
 
 Holoscanner supports multiple Hololens users, and can also fuse the scans of multiple users.
 
+Contact:
+
+holynski@cs.washington.edu 
+edzhang@cs.washington.edu
+kpar@cs.washington.edu
+izadinia@cs.washington.edu
+
 ---
 
 Course webpage: <http://courses.cs.washington.edu/vrcapstone>
