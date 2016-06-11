@@ -13,10 +13,10 @@ Holoscanner supports multiple Hololens users, and can also fuse the scans of mul
 
 Contact:
 
-holynski@cs.washington.edu 
-edzhang@cs.washington.edu
-kpar@cs.washington.edu
-izadinia@cs.washington.edu
+- holynski@cs.washington.edu 
+- edzhang@cs.washington.edu
+- kpar@cs.washington.edu
+- izadinia@cs.washington.edu
 
 ---
 
