@@ -4,7 +4,7 @@ title: Team
 teamnames:
     - Aleksander Holynski
     - Edward Zhang
-    - <a href="http://homes.cs.washington.edu/~izadinia">Hamid Izadinia</a>
+    - Hamid Izadinia
     - Keunhong Park
 imageurls:
     - http://grail.cs.washington.edu/wp-content/uploads/2015/08/holynski.jpg
